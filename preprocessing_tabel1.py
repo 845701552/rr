@@ -3,6 +3,7 @@ import numpy as np
 data=pd.read_excel("D:/auto_preprocessing/分析数据输入模板-提供文件.xlsx",sheet_name="原始数据")
 data_describe=pd.read_excel("D:/auto_preprocessing/分析数据输入模板-提供文件.xlsx",sheet_name="变量说明")
 
+
 "变量类型只包含：字符串，数据(N),  结局没有包含"
 def out_put_total_describe(data,data_describe):
     cols=list(data_describe["变量名称"].values)
@@ -38,4 +39,4 @@ def out_put_total_describe(data,data_describe):
     total_describe_df = pd.DataFrame(total_describe_np, index=column,columns=indexs)
     print(total_describe_np)
     total_describe_df.to_csv("C:/Users/gang.yu/Desktop/total_describe_df.csv",encoding="utf_8_sig")
-#out_put_total_describe(data,data_describe)
+out_put_total_describe(data,data_describe)
